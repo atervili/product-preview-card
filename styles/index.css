@@ -1,0 +1,258 @@
+@layer design, reset, utility, component, base, mobile, tablet-desktop;
+
+@layer design {
+    :root {
+        /* Colors */
+        --color-black: #1c232b;
+        --color-grey: #6c7289;
+        --color-cream: #f2eae2;
+        --color-white: #ffffff;
+        --color-green-500: #3d8168;
+        --color-green-700: #1a4032;
+
+        /* Typography */
+        --font-optical-sizing-default: auto;
+        --font-style-default: normal;
+
+        --font-family-text-preset-1: "Fraunces", serif;
+        --font-weight-text-preset-1: 700;
+        --font-size-text-preset-1: 2rem;
+        --line-height-text-preset-1: 1;
+        --letter-spacing-text-preset-1: 0px;
+        --font-variation-settings-text-preset-1: "SOFT" 0, "WONK" 0;
+
+        --font-family-text-preset-2: "Montserrat", sans-serif;
+        --font-weight-text-preset-2: 700;
+        --font-size-text-preset-2: 0.875rem;
+        --line-height-text-preset-2: 1.1;
+        --letter-spacing-text-preset-2: 0px;
+
+        --font-family-text-preset-3: "Montserrat", sans-serif;
+        --font-weight-text-preset-3: 500;
+        --font-size-text-preset-3: 0.875rem;
+        --line-height-text-preset-3: 1.6;
+        --letter-spacing-text-preset-3: 0px;
+
+        --font-family-text-preset-4: "Montserrat", sans-serif;
+        --font-weight-text-preset-4: 500;
+        --font-size-text-preset-4: 0.75rem;
+        --line-height-text-preset-4: 1.2;
+        --letter-spacing-text-preset-4: 5px;
+        --text-transform-text-preset-4: uppercase;
+
+        --font-family-text-preset-5: "Montserrat", sans-serif;
+        --font-weight-text-preset-5: 500;
+        --font-size-text-preset-5: 0.8125rem;
+        --line-height-text-preset-5: 1.2;
+        --letter-spacing-text-preset-5: 0px;
+        --text-decoration-text-preset-5: line-through;
+
+        /* Spacing */
+        --spacing-500: 2.5rem;
+        --spacing-400: 2rem;
+        --spacing-300: 1.5rem;
+        --spacing-200: 1rem;
+        --spacing-100: 0.5rem;
+        --spacing-50: 0.25rem;
+
+        /* Borders */
+        --border-radius-default: 8px;
+    }
+}
+
+@layer reset {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html,
+    body,
+    h1,
+    h2,
+    p,
+    span,
+    picture,
+    img,
+    button {
+        margin: 0;
+        padding: 0;
+    }
+
+    picture,
+    img {
+        display: block;
+        max-inline-size: 100%;
+        block-size: auto;
+    }
+}
+
+@layer utility {
+    .green-500 {
+        color: var(--color-green-500);
+    }
+
+    .grey {
+        color: var(--color-grey);
+    }
+
+    .white {
+        color: var(--color-white);
+    }
+
+    .text-preset-1 {
+        font-family: var(--font-family-text-preset-1);
+        font-optical-sizing: var(--font-optical-sizing-default);
+        font-weight: var(--font-weight-text-preset-1);
+        font-size: var(--font-size-text-preset-1);
+        font-style: var(--font-style-default);
+        font-variation-settings: var(--font-variation-settings-text-preset-1);
+        line-height: var(--line-height-text-preset-1);
+        letter-spacing: var(--letter-spacing-text-preset-1);
+    }
+
+    .text-preset-2 {
+        font-family: var(--font-family-text-preset-2);
+        font-optical-sizing: var(--font-optical-sizing-default);
+        font-weight: var(--font-weight-text-preset-2);
+        font-size: var(--font-size-text-preset-2);
+        font-style: var(--font-style-default);
+        line-height: var(--line-height-text-preset-2);
+        letter-spacing: var(--letter-spacing-text-preset-2);
+    }
+
+    .text-preset-3 {
+        font-family: var(--font-family-text-preset-3);
+        font-optical-sizing: var(--font-optical-sizing-default);
+        font-weight: var(--font-weight-text-preset-3);
+        font-size: var(--font-size-text-preset-3);
+        font-style: var(--font-style-default);
+        line-height: var(--line-height-text-preset-3);
+        letter-spacing: var(--letter-spacing-text-preset-3);
+    }
+
+    .text-preset-4 {
+        font-family: var(--font-family-text-preset-4);
+        font-optical-sizing: var(--font-optical-sizing-default);
+        font-weight: var(--font-weight-text-preset-4);
+        font-size: var(--font-size-text-preset-4);
+        font-style: var(--font-style-default);
+        line-height: var(--line-height-text-preset-4);
+        letter-spacing: var(--letter-spacing-text-preset-4);
+        text-transform: var(--text-transform-text-preset-4);
+    }
+
+    .text-preset-5 {
+        font-family: var(--font-family-text-preset-5);
+        font-optical-sizing: var(--font-optical-sizing-default);
+        font-weight: var(--font-weight-text-preset-5);
+        font-size: var(--font-size-text-preset-5);
+        font-style: var(--font-style-default);
+        text-decoration: var(--text-decoration-text-preset-5);
+        line-height: var(--line-height-text-preset-5);
+        letter-spacing: var(--letter-spacing-text-preset-5);
+    }
+}
+
+@layer component {
+    button.add-to-cart {
+        display: flex;
+        gap: var(--spacing-100);
+        justify-content: center;
+        padding-inline: var(--spacing-400);
+        padding-block: var(--spacing-200);
+        background-color: var(--color-green-500);
+        border: 0;
+        border-radius: var(--border-radius-default);
+        transition-property: background-color;
+        transition-duration: 0.2s;
+
+        img {
+            width: 16px;
+            height: 16px;
+        }
+
+        &:hover,
+        &:focus-visible {
+            background-color: var(--color-green-700);
+        }
+    }
+}
+
+@layer base {
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+
+    body {
+        background-color: var(--color-cream);
+    }
+
+    .card {
+        display: flex;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-300);
+            padding: var(--spacing-400);
+            background-color: var(--color-white);
+
+            .price {
+                display: flex;
+                gap: var(--spacing-200);
+                align-items: center;
+            }
+        }
+    }
+}
+
+@layer mobile {
+    @media (width < 768px) {
+        .card {
+            max-width: 350px;
+            flex-direction: column;
+
+            .product-photo img {
+                border-top-left-radius: var(--border-radius-default);
+                border-top-right-radius: var(--border-radius-default);
+            }
+
+            .content {
+                border-bottom-left-radius: var(--border-radius-default);
+                border-bottom-right-radius: var(--border-radius-default);
+            }
+        }
+    }
+}
+
+@layer tablet-desktop {
+    @media (width >= 768px) {
+        .card {
+            max-width: 600px;
+            flex-direction: row;
+
+            .product-photo {
+                flex-basis: 50%;
+
+                img {
+                    object-fit: cover;
+                    border-top-left-radius: var(--border-radius-default);
+                    border-bottom-left-radius: var(--border-radius-default);
+                }
+            }
+
+            .content {
+                flex-basis: 50%;
+                border-top-right-radius: var(--border-radius-default);
+                border-bottom-right-radius: var(--border-radius-default);
+            }
+        }
+    }
+}

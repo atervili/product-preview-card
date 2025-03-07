@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="styles/index.css" />
+        <link
+            rel="icon"
+            type="x-icon/png"
+            href="assets/images/favicon-32x32.png" />
+        <title>Product preview card component</title>
+    </head>
+    <body>
+        <div class="card">
+            <picture class="product-photo">
+                <source
+                    srcset="assets/images/image-product-desktop.jpg"
+                    media="(width >= 768px)" />
+                <img
+                    src="assets/images/image-product-mobile.jpg"
+                    alt="Perfume bottle on a white background surrounded by green leaves" />
+            </picture>
+            <div class="content">
+                <h2 class="category text-preset-4 grey">Perfume</h2>
+                <h1 class="name text-preset-1">
+                    Gabrielle Essence Eau De Parfum
+                </h1>
+                <p class="description text-preset-3 grey">
+                    A floral, solar and voluptuous interpretation composed by
+                    Olivier Polge, Perfumer-Creator for the House of CHANEL.
+                </p>
+                <div class="price">
+                    <span class="current text-preset-1 green-500">$149.99</span>
+                    <span class="original text-preset-5 grey">$169.99</span>
+                </div>
+                <button class="add-to-cart">
+                    <img
+                        class="icon"
+                        src="assets/images/icon-cart.svg"
+                        alt="" />
+                    <span class="label text-preset-2 white">Add to Cart</span>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
